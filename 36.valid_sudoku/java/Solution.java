@@ -12,7 +12,7 @@ class Solution {
         for (int r = 0; r < 9; r ++) {
             rowHashSet[r] = new HashSet<>();
             for (int c = 0; c < 9; c ++){
-                System.out.print(board[r][c] + " " + ((c + 1) % 3 == 0 ? "|" : ""));
+                
                 int sR = r / 3;
                 int sC = c / 3;
                 colHashSet[c] = new HashSet<>();
@@ -29,20 +29,10 @@ class Solution {
                 colHashSet[c].add(board[r][c]);
                 subBoxHashSet[sR][sC].add(board[r][c]);
             }
-            if ((r + 1) % 3 == 0) System.out.printf("\n_____________________\n");
-            else System.out.println();
         }
         
 
 
         return true;
-    }
-
-    public static void main (String[] args) {
-        char[][] input = new char[9][9];
-        System.out.println(args[0]);
-
-
-        // new Solution().isValidSudoku()
-    }
+    }`
 }

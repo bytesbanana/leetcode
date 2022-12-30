@@ -17,7 +17,6 @@ function threeSum(nums: number[]): number[][] {
       } else if (sum < 0) {
         l++;
       } else {
-        // console.log(i, l, r);
         answer.push([nums[i], nums[l], nums[r]]);
         l += 1;
         while (nums[l] === nums[l - 1] && l < r) {
@@ -30,6 +29,6 @@ function threeSum(nums: number[]): number[][] {
   return answer;
 }
 
-// console.log(threeSum([-1, 0, 1, 2, -1, -4]));
-// console.log(threeSum([-1, 0, 1, 0]));
+console.log(threeSum([-1, 0, 1, 2, -1, -4]));
+console.log(threeSum([-1, 0, 1, 0]));
 console.log(threeSum([-1, 0, 1, 2, -1, -4, -2, -3, 3, 0, 4]));
